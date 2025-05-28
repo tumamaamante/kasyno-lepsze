@@ -1,5 +1,5 @@
 // Logika kasyna
-let stanKonta = 10000;
+let stanKonta = 2137; // Początkowy stan konta
 let aktualnaGra = null;
 let aktualnaStawka = null;
 
