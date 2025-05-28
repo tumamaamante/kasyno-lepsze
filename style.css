@@ -4,15 +4,6 @@ body {
   color: white;
 }
 
-.slot-reel {
-  animation: spin 0.5s ease-in-out;
-}
-
-@keyframes spin {
-  0% { transform: translateY(-20px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
 .card-flip {
   animation: flip 0.6s ease-in-out;
 }
@@ -24,10 +15,10 @@ body {
 }
 
 .game-container {
-  background: rgba(15, 8, 20, 0.9);
+  background: rgba(15, 8, 20, 0.95);
   border: 1px solid #4a2352;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(100, 30, 120, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .header-glow {
@@ -37,12 +28,15 @@ body {
 .btn-primary {
   background: #7e22ce;
   border: none;
-  transition: transform 0.3s ease;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
   background: #9333ea;
+  transform: translateY(-2px);
 }
 
 .win-glow {
@@ -54,11 +48,14 @@ body {
   background: #1a0a1f;
   border: 1px solid #7e22ce;
   border-radius: 12px;
+  padding: 20px;
 }
 
 .slot-window {
   background: rgba(26, 10, 31, 0.95);
   border: 1px solid #be185d;
+  border-radius: 8px;
+  padding: 15px;
 }
 
 .jackpot-animation {
@@ -66,7 +63,6 @@ body {
 }
 
 @keyframes jackpot {
-  0% { color: #ff6b6b; }
+  0%, 100% { color: #ff6b6b; }
   50% { color: #ffd166; }
-  100% { color: #ff6b6b; }
 }
