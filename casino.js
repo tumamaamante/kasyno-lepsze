@@ -1,5 +1,5 @@
 // Logika kasyna
-let stanKonta = 2137; // Początkowy stan konta
+let stanKonta = 10000; // Początkowy stan konta
 let aktualnaGra = null;
 let aktualnaStawka = null;
 
@@ -19,7 +19,7 @@ function aktualizujStanKonta(kwota) {
   
   if (stanKonta <= 0) {
     alert('Skończyły ci się pieniądze! Resetujemy do 10 000 PLN');
-    stanKonta = 2137; // Resetuj stan konta
+    stanKonta = 10000; // Resetuj stan konta
     document.getElementById('stan-konta').textContent = stanKonta.toLocaleString();
   }
 }
