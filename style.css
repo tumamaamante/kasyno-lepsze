@@ -15,7 +15,7 @@ body {
 }
 
 .game-container {
-  background: rgba(15, 8, 20, 0.95);
+  background: rgba(10, 5, 14, 0.95);
   border: 1px solid #4a2352;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
