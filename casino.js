@@ -19,7 +19,7 @@ function aktualizujStanKonta(kwota) {
   
   if (stanKonta <= 0) {
     alert('Skończyły ci się pieniądze! Resetujemy do 10 000 PLN');
-    stanKonta = 10000;
+    stanKonta = 2137; // Resetuj stan konta
     document.getElementById('stan-konta').textContent = stanKonta.toLocaleString();
   }
 }
