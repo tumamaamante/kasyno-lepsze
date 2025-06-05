@@ -1,18 +1,18 @@
-// Logika kasyna
+
 let stanKonta = 10000;
 let aktualnaGra = null;
 let aktualnaStawka = null;
 
-// Zmienne automatów
+
 const symboleAutomatow = ['🍒', '🍋', '🍊', '🍇', '🔔', '💎', '7️⃣'];
 
-// Zmienne blackjacka
+
 let talia = [];
 let kartyGracza = [];
 let kartyKrupiera = [];
 let graWToku = false;
 
-// Funkcje pomocnicze
+
 function aktualizujStanKonta(kwota) {
   stanKonta += kwota;
   document.getElementById('stan-konta').textContent = stanKonta.toLocaleString();
@@ -59,7 +59,7 @@ function kręćAutomaty() {
 function sprawdzWynikAutomatow(wyniki, stawka) {
   const wynikDiv = document.getElementById('wynik-automat');
   
-  // Sprawdź wygrane
+  
   if (wyniki[0] === wyniki[1] && wyniki[1] === wyniki[2]) {
     // Trzy takie same
     let mnoznik = 5;
@@ -71,7 +71,7 @@ function sprawdzWynikAutomatow(wyniki, stawka) {
     aktualizujStanKonta(wygrana);
     wynikDiv.innerHTML = `<span class="text-green-400 win-glow">🎉 JACKPOT! Wygrałeś ${wygrana} PLN! 🎉</span>`;
   } else if (wyniki[0] === wyniki[1] || wyniki[1] === wyniki[2] || wyniki[0] === wyniki[2]) {
-    // Dwa takie same
+    
     const wygrana = stawka * 2;
     aktualizujStanKonta(wygrana);
     wynikDiv.innerHTML = `<span class="text-yellow-400">✨ Dwa takie same! Wygrałeś ${wygrana} PLN! ✨</span>`;
@@ -96,7 +96,7 @@ function utworzTalii() {
     }
   }
   
-  // Tasuj talię
+  
   for (let i = talia.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [talia[i], talia[j]] = [talia[j], talia[i]];
@@ -122,7 +122,7 @@ function obliczPunkty(reka) {
     if (karta.figura === 'A') asy++;
   }
   
-  // Dostosuj dla asów
+  
   while (punkty > 21 && asy > 0) {
     punkty -= 10;
     asy--;
@@ -157,7 +157,7 @@ function rozpocznijGre() {
   kartyKrupiera = [];
   graWToku = true;
   
-  // Wyczyść poprzednie karty
+  // usuwanie
   document.getElementById('karty-gracz').innerHTML = '';
   document.getElementById('karty-krupier').innerHTML = '';
   document.getElementById('wynik-blackjack').innerHTML = '';
@@ -220,7 +220,7 @@ function aktualizujWidokBlackjacka() {
   const kontenerGracza = document.getElementById('karty-gracz');
   const kontenerKrupiera = document.getElementById('karty-krupier');
   
-  // Wyczyść i ponownie wyświetl karty
+  
   kontenerGracza.innerHTML = '';
   kontenerKrupiera.innerHTML = '';
   
